@@ -13,3 +13,7 @@ sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Lienol/openwrt-package
 sed -i '$a src-git lienol https://github.com/Lancenas/lienol-openwrt-package.git' feeds.conf.default
+
+wget -c "https://github.com/vernesong/OpenClash/archive/master.zip" -O openclash.zip
+unzip openclash.zip
+cp -r OpenClash-master/luci-app-openclash package
